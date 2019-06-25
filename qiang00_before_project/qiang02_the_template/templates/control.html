@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{% if comm %}
+    <a href="https://www.baidu.com"> baidu </a>
+{% else %}
+    <a href="https://www.youdao.com">youdao</a>
+{% endif %}
+
+
+
+{% if comm | length > 0 %}
+    there are {{ comm | length }} comments
+{% else %}
+    there no {{ comm }} comments
+{% endif %}
+
+{% for element in my_list if element.id != 5 %}
+    {% if loop.index == 1 %}
+        {{ element.id }}
+        <li style="background: yellow" >{{ element.value }}</li>
+    {% elif loop.index == 2 %}
+        <li style="background: red" >{{ element.value }}</li>
+    {% elif loop.index == 3 %}
+        <li style="background: blue" >{{ element.value }}</li>
+    {% else %}
+        <li style="background: green;" >{{ element.value }}</li>
+
+    {% endif %}
+{% endfor %}
+
+
+
+</body>
+</html>
