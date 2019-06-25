@@ -1,0 +1,26 @@
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>{{ dic1.name }}</h1>
+<h1>{{ dic1['age'] }}</h1>
+<h1>{{ dic1.li[1] }}</h1>
+
+{% if dic1.user %}
+    <h2>{{ dic1.user }}</h2>
+{% else %}
+    hello
+{% endif %}
+
+<ul>
+    {% for l in dic1.li %}
+        <li>{{ l }}</li>
+    {% endfor %}
+</ul>
+
+
+</body>
+</html>
