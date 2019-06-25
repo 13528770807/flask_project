@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+{{ config.SQLALCHEMY_DATABASE_RUI }}<br/>
+
+{{ request.url }}<br/>
+
+{{ session.new }}<br/>
+
+{{ g.name }}<br/>
+
+{{ url_for('set_session') }}<br/>
+
+{{ url_for('user', user_id=666) }}<br/>
+
+{% for message in get_flashed_messages() %}
+    {{ message }}
+{% endfor %}
+
+</body>
+</html>
