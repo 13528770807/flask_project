@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+    <label>转帐账户:</label><input type="number" name="to_account"><br/>
+    <label>金额:</label><input type="number" name="money"><br/>
+    <input type="submit" value="转帐">
+</form>
+
+</body>
+</html>
